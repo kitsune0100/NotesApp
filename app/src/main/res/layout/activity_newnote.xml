@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newtitleofactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_notesbackground"
+    tools:context=".newnote">
+
+    <EditText
+        android:id="@+id/newtextofnote"
+        android:layout_width="378dp"
+        android:layout_height="545dp"
+        android:ems="10"
+        android:gravity="start"
+        android:singleLine="false"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:scrollHorizontally="false"
+        android:textColor="@color/gray"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <EditText
+        android:id="@+id/titleofnote"
+        android:layout_width="210dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textPersonName"
+        android:maxLength="2000"
+        android:scrollHorizontally="false"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/newtextofnote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/goodtimesfont"
+        android:text="SAVE"
+        android:textColor="#821E84 "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newtextofnote"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="79dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/goodtimesfont"
+        android:gravity="center"
+        android:text="Title:"
+        android:textSize="20sp"
+        android:textColor="@color/textgray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/titleofnote"
+        app:layout_constraintEnd_toStartOf="@+id/titleofnote"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
