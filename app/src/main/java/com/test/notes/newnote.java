@@ -35,7 +35,6 @@ public class newnote extends AppCompatActivity {
                     FileOutputStream fos=openFileOutput(titletobeapplied.getText().toString(),MODE_PRIVATE);
                     fos.write((content.getText().toString()).getBytes());
                     fos.close();
-
                 }
                 catch(IOException e){
                     Log.e("Exception","File write failed: "+titletobeapplied);

@@ -33,7 +33,7 @@
         android:layout_height="38dp"
         android:ems="10"
         android:gravity="start"
-        android:inputType="textPersonName"
+        android:singleLine="false"
         android:maxLength="2000"
         android:background="@drawable/titlebox"
         android:scrollHorizontally="false"
