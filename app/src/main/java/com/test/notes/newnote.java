@@ -24,7 +24,7 @@ public class newnote extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newnote);
-        final EditText content=(EditText)findViewById(R.id.newtextofnote);
+        final EditText content=findViewById(R.id.newtextofnote);
         final EditText titletobeapplied=findViewById(R.id.titleofnote);
         content.setMovementMethod(new ScrollingMovementMethod());
         Button savebutton=findViewById(R.id.save);
@@ -44,9 +44,7 @@ public class newnote extends AppCompatActivity {
                 Intent response=new Intent();
                 response.putExtra("newnote",titletobeapplied.getText().toString());
                 setResult(Activity.RESULT_OK,response);
-
                 finish();
-                //newnote.super.onBackPressed();
             }
         });
 
