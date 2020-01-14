@@ -1,5 +1,7 @@
 package com.test.notes;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,15 +10,18 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
-
     ArrayList<String> mDataset;
+    int[] arr={R.drawable.notebox1,R.drawable.notebox2};
     public static class MyViewHolder extends RecyclerView.ViewHolder {
+
         public TextView textview;
         public MyViewHolder(View v){
             super(v);
             textview= v.findViewById(R.id.filename);
+
         }
     }
 
@@ -29,6 +34,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     }
     public void onBindViewHolder(MyViewHolder holder,int position) {
         holder.textview.setText(mDataset.get(position));
+        //Random r= new Random();
+        holder.textview.setBackgroundResource(arr[0]);
     }
     public int getItemCount(){
         return mDataset.size();

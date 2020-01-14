@@ -19,7 +19,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class newnote extends AppCompatActivity {
-    boolean staus_newnote[]={false,false};
+    //boolean staus_newnote[]={false,false};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
