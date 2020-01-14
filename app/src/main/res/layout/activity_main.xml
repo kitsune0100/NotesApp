@@ -16,6 +16,8 @@
         android:fontFamily="@font/goodtimes"
         android:text="+"
         android:textColor="@color/colorAccent"
+        android:elevation="10dp"
+        android:translationZ="10dp"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
