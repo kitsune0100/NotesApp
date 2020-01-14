@@ -2,10 +2,11 @@
 <resources>
     <color name="colorPrimary">#44443F</color>
     <color name="colorPrimaryDark">#44443F</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FFF48FB1</color>
     <color name="gray">#787575</color>
     <color name="pink">#FFAFFB</color>
     <color name="white">#FFFFFF</color>
+    <color name="white2" >#FAF7F7</color>
     <color name="textgray">#474444</color>
-    <color name="yellow">#E7C47B</color>
+    <color name="yellow">#FFFCE4EC</color>
 </resources>

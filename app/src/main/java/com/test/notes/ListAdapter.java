@@ -16,7 +16,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         public TextView textview;
         public MyViewHolder(View v){
             super(v);
-            textview=(TextView) v.findViewById(R.id.filename);
+            textview= v.findViewById(R.id.filename);
         }
     }
 

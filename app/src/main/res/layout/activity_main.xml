@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white2"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_notesbackground"
     tools:context=".MainActivity">
 
     <Button
@@ -15,7 +15,7 @@
         android:background="@drawable/roundbutton"
         android:fontFamily="@font/goodtimes"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/colorAccent"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,12 +29,14 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/goodtimesfont"
+        android:fontFamily="@font/typoroundbold"
         android:gravity="center"
         android:text="NOTES"
+        android:letterSpacing="1.25"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="#607272"
-        android:textSize="24sp"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

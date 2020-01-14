@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button makenewnote;
+       // TextView textView=findViewById(R.id.textView);
         recyclerView=findViewById(R.id.recyclerView);
         //recyclerView.setHasFixedSize(true);
         File[] files=getFilesDir().listFiles();
         ArrayList<String> mdataset=new ArrayList<String>(10);
-        mdataset.add("first");
+        //mdataset.add("first");
         for(int i=0;i<files.length;i++)
         {
             Log.d("Exception","File name : "+files[i].getName());
