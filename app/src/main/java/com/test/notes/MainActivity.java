@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         layoutManager.canScrollVertically();
         recyclerView.setLayoutManager(layoutManager);
-
         makenewnote=findViewById(R.id.createnew);
         makenewnote.setOnClickListener(new View.OnClickListener() {
             @Override
