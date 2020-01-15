@@ -24,7 +24,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
         }
     }
-
     public ListAdapter(ArrayList<String> myDataset) {
         mDataset=myDataset;
     }
