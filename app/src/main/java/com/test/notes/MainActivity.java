@@ -1,14 +1,18 @@
 package com.test.notes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,12 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button makenewnote;
-       // TextView textView=findViewById(R.id.textView);
+        getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(),R.color.pink));
         recyclerView=findViewById(R.id.recyclerView);
-        //recyclerView.setHasFixedSize(true);
         File[] files=getFilesDir().listFiles();
         ArrayList<String> mdataset=new ArrayList<String>(10);
-        //mdataset.add("first");
         for(int i=0;i<files.length;i++)
         {
             Log.d("Exception","File name : "+files[i].getName());
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         }
         mAdapter=new ListAdapter(mdataset);
         recyclerView.setAdapter(mAdapter);
+        ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new SwipeToDelete(mAdapter));
+        itemTouchHelper.attachToRecyclerView(recyclerView);
         layoutManager=new LinearLayoutManager(this);
 
         layoutManager.canScrollVertically();
