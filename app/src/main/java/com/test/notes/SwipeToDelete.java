@@ -2,6 +2,7 @@ package com.test.notes;
 
 import android.content.ClipData;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -12,6 +13,7 @@ public class SwipeToDelete extends ItemTouchHelper.SimpleCallback {
     public SwipeToDelete(ListAdapter adapter)
     {
         super(0,ItemTouchHelper.RIGHT);
+        Log.d("GESTURE","SWIPPED TO DELETE");
         mAdapter=adapter;
     }
     @Override

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Exception","File name : "+files[i].getName());
             mdataset.add(files[i].getName());
         }
-        mAdapter=new ListAdapter(mdataset);
+        mAdapter=new ListAdapter(this,mdataset);
         recyclerView.setAdapter(mAdapter);
         ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new SwipeToDelete(mAdapter));
         itemTouchHelper.attachToRecyclerView(recyclerView);
@@ -50,11 +50,18 @@ public class MainActivity extends AppCompatActivity {
         makenewnote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(new Intent(MainActivity.this,newnote.class),1);
+                Intent intent=new Intent(MainActivity.this,newnote.class);
+                intent.putExtra("mode","new");
+                startActivityForResult(intent,1);
             }
         });
     }
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
 
+    }
      @Override
     protected void onActivityResult(int requestCode,int resultCode,Intent data)
     {
@@ -73,5 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 mAdapter.mDataset.add(newnotetitle);
                 recyclerView.setAdapter(mAdapter);
             }
-        } }
+        }
+    }
+
 }

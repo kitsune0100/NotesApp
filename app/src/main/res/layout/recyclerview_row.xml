@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="1sp"
-    android:alpha="45" >
+    android:alpha="45">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         cardview:cardElevation="20dp"
         cardview:contentPaddingBottom="5dp"
+        cardview:cardCornerRadius="5dp"
         >
 
         <TextView
@@ -19,8 +20,17 @@
             android:layout_width="275dp"
             android:layout_height="55dp"
             android:text="TextView"
+            android:gravity="center"
             android:paddingLeft="10dp"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:layout_gravity="end"
+            cardview:srcCompat="@android:drawable/btn_star_big_off" />
+
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
