@@ -2,6 +2,7 @@ package com.test.notes;
 
 import android.content.ClipData;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,9 @@ public class SwipeToDelete extends ItemTouchHelper.SimpleCallback {
     }
     @Override
     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            int position=viewHolder.getAdapterPosition();
+            String title=((TextView)viewHolder.itemView.findViewById(R.id.filename)).getText().toString();
+            mAdapter.deleteItem(position,title);
             Log.d("GESTURE","SWIPE RIGHT TOUCH HELPER");
     }
     @Override

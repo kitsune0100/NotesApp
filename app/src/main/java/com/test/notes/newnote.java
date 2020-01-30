@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -59,9 +60,13 @@ public class newnote extends AppCompatActivity {
         }
         else
         {
-            content.setClickable(false);
-            titletobeapplied.setClickable(false);
-            titletobeapplied.setLongClickable(true);
+            setContentView(R.layout.activity_newnote1);
+            final TextView content1=findViewById(R.id.textofnote1);
+            final TextView titletobeapplied1=findViewById(R.id.titleofnote1);
+            Button savebutton1=findViewById(R.id.save1);
+            content1.setClickable(false);
+            titletobeapplied1.setClickable(false);
+            titletobeapplied1.setLongClickable(true);
             String filename=getFilesDir().toString()+"/"+getIntent().getStringExtra("filename");
             File file = new File(filename);
 
@@ -75,9 +80,9 @@ public class newnote extends AppCompatActivity {
             }
             catch (IOException e) {
             }
-            titletobeapplied.setText(file.getName());
-            content.setText(text.toString());
-            savebutton.setVisibility(View.INVISIBLE);
+            titletobeapplied1.setText(file.getName());
+            content1.setText(text.toString());
+            savebutton1.setVisibility(View.INVISIBLE);
 
         }
     }

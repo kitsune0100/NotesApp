@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.core.view.GestureDetectorCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -33,7 +34,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         public ImageView imageView;
         public MyViewHolder(View v){
             super(v);
-            imageView=v.findViewById(R.id.imageView);
+            //imageView=v.findViewById(R.id.imageView);
             textview= v.findViewById(R.id.filename);
             v.setClickable(true);
             v.setOnClickListener(this);
@@ -60,6 +61,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
   public void onBindViewHolder(MyViewHolder holder,int position) {
       holder.textview.setText(mDataset.get(position));
         holder.textview.setBackgroundResource(arr[0]);
+    }
+    public void deleteItem(int position,String title)
+    {
+        mDataset.remove(position);
+        notifyItemRemoved(position);
+        File file=new File(context.getFilesDir(),title);
+        if(context.deleteFile(title))
+        {
+            Toast toast=Toast.makeText(context,"Deleted",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
     }
     public int getItemCount(){
         return mDataset.size(); }

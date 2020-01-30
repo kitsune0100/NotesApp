@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".newnote">
 
-    <EditText
-        android:id="@+id/textofnote"
+    <TextView
+        android:id="@+id/textofnote1"
         android:layout_width="363dp"
         android:layout_height="492dp"
         android:background="@drawable/titlebox"
@@ -16,7 +16,9 @@
         android:gravity="start"
         android:paddingLeft="8dp"
         android:paddingTop="5dp"
+        android:textSize="24sp"
         android:scrollbars="vertical"
+        android:clickable="false"
         android:scrollHorizontally="false"
         android:singleLine="false"
         android:textAlignment="textStart"
@@ -24,33 +26,36 @@
         android:verticalScrollbarPosition="right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleofnote"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@+id/titleofnote1"
+        app:layout_constraintVertical_bias="0.13" />
 
-    <EditText
-        android:id="@+id/titleofnote"
-        android:layout_width="246dp"
-        android:layout_height="37dp"
-        android:background="@drawable/titlebox"
+    <TextView
+        android:id="@+id/titleofnote1"
+        android:layout_width="245dp"
+        android:layout_height="64dp"
         android:ems="10"
-        android:gravity="start"
+        android:background="@color/cardview_light_background"
+        android:textAllCaps="true"
+        android:clickable="false"
+        android:gravity="center"
         android:maxLength="2000"
         android:paddingLeft="8dp"
         android:paddingTop="5dp"
         android:scrollHorizontally="false"
         android:singleLine="false"
         android:textColor="@color/gray"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/save1"
         android:layout_width="68dp"
         android:layout_height="68dp"
         android:background="@drawable/roundbutton"
@@ -66,21 +71,4 @@
         app:layout_constraintTop_toBottomOf="@+id/textofnote"
         app:layout_constraintVertical_bias="0.206" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="81dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/typoroundbold"
-        android:gravity="center"
-        android:letterSpacing="0.15"
-        android:text="Title:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
-        android:textColor="@color/textgray"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/titleofnote"
-        app:layout_constraintEnd_toStartOf="@+id/titleofnote"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/titleofnote"
-        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

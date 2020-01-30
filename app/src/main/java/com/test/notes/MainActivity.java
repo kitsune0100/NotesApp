@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
+    LinearLayoutManager layoutManager;
     ListAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
         ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new SwipeToDelete(mAdapter));
         itemTouchHelper.attachToRecyclerView(recyclerView);
         layoutManager=new LinearLayoutManager(this);
-
         layoutManager.canScrollVertically();
+        //layoutManager.setStackFromEnd(true);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setLayoutManager(layoutManager);
         makenewnote=findViewById(R.id.createnew);
         makenewnote.setOnClickListener(new View.OnClickListener() {

@@ -25,12 +25,5 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="55sp"
-            android:layout_height="55sp"
-            android:layout_gravity="end"
-            cardview:srcCompat="@android:drawable/btn_star_big_off" />
-
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
